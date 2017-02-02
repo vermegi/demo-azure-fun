@@ -18,8 +18,8 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
 
     using (var client = new DocumentClient(new Uri(endpointUrl), authorizationKey))
     {
-        //    var database = client.CreateDatabaseQuery().Where(db => db.Id == databaseName).AsEnumerable().FirstOrDefault();
-        //    log.Info("1. Query for a database returned: {0}", database == null ? "no results" : database.Id);
+        var database = client.CreateDatabaseQuery().Where(db => db.Id == databaseName).AsEnumerable().FirstOrDefault();
+        log.Info("1. Query for a database returned: {0}", database == null ? "no results" : database.Id);
 
         //    if (database == null)
         //    {
