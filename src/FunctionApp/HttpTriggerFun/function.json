@@ -1,4 +1,5 @@
-{
+﻿{
+  "disabled": false,
   "bindings": [
     {
       "authLevel": "function",
@@ -7,10 +8,9 @@
       "direction": "in"
     },
     {
-      "name": "$return",
+      "name": "res",
       "type": "http",
       "direction": "out"
     }
-  ],
-  "disabled": false
+  ]
 }
