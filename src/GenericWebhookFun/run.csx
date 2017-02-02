@@ -25,7 +25,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
         {
 
             database = await client.CreateDatabaseAsync(new Database { Id = databaseName });
-            //        log.Info("\n2. Created Database: id - {0}", database.Id);
+            log.Info("\n2. Created Database: id - {0}", database.Id);
 
             //        var collection = await client.CreateDocumentCollectionAsync(
             //            UriFactory.CreateDatabaseUri(databaseName),
