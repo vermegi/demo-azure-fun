@@ -11,10 +11,10 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
 {
     log.Info($"Webhook was triggered!");
 
-    var databaseName = "testdb2";
+    var databaseName = "azureeventingdb";
     var endpointUrl = System.Environment.GetEnvironmentVariable("endpointurl");
     var authorizationKey = System.Environment.GetEnvironmentVariable("authorizationkey");
-    var collectionName = "testcoll2";
+    var collectionName = "sbmessages";
 
     using (var client = new DocumentClient(new Uri(endpointUrl), authorizationKey))
     {
