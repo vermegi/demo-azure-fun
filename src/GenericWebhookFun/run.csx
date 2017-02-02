@@ -32,7 +32,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
                 new DocumentCollection { Id = collectionName },
                 new RequestOptions { OfferThroughput = 400 });
 
-            //        log.Info("\n2.1. Created Collection \n{0}", collection);
+            log.Info("\n2.1. Created Collection \n{0}", collection);
         }
     }
 
