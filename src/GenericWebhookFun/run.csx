@@ -11,10 +11,10 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
 {
     log.Info($"Webhook was triggered!");
 
-    var databaseName = "";
-    var endpointUrl = "";
-    var authorizationKey = "";
-    var collectionName = "";
+    var databaseName = "testdb2";
+    var endpointUrl = System.Environment.GetEnvironmentVariable("endpointurl");
+    var authorizationKey = System.Environment.GetEnvironmentVariable("authorizationkey");
+    var collectionName = "testcoll2";
 
     using (var client = new DocumentClient(new Uri(endpointUrl), authorizationKey))
     {
